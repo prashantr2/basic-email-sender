@@ -1,10 +1,12 @@
 const express = require('express')
 const { sender, templateMaker, CUSTOM_API_TOKEN, PORT } = require('./mailer')
 const morgan = require('morgan')
+const cors = require('cors')
 
 const app = express()
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
+app.use(cors())
 app.use(express.json())
 
 
