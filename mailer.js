@@ -95,7 +95,7 @@ const templateMaker = ({ from, fromName, to, subject, text }) => {
     </div>
     <div class="content">
       <p class="from-box">From (portfolio): ${fromName}<br/>
-         Email: ${fromName},</p>
+         Email: ${from},</p>
       <hr/>
       <p>${text}</p>
     </div>
