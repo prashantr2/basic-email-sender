@@ -107,5 +107,6 @@ const templateMaker = ({ from, to, subject, text }) => {
 module.exports = { 
     sender, 
     templateMaker, 
-    CUSTOM_API_TOKEN: process.env.CUSTOM_API_TOKEN
+    CUSTOM_API_TOKEN: process.env.CUSTOM_API_TOKEN,
+    PORT: process.env.PORT || 3000
 };

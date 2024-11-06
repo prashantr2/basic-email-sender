@@ -1,5 +1,5 @@
 const express = require('express')
-const { sender, templateMaker, CUSTOM_API_TOKEN } = require('./mailer')
+const { sender, templateMaker, CUSTOM_API_TOKEN, PORT } = require('./mailer')
 const morgan = require('morgan')
 
 const app = express()
@@ -41,7 +41,6 @@ app.post('/', async (req, res) => {
     res.status(200).json({ msg: 'Email sent successfully!' })
 })
 
-const PORT = 8787
 app.listen(PORT, () => {
     console.log(`Server is up and running on port: ${PORT}`)
 })
