@@ -32,6 +32,7 @@ app.post('/', async (req, res) => {
         subject: body.subject,
         html: templateMaker({ 
             from: body.from, 
+            fromName: body.fromName, 
             to: body.to, 
             subject: body.subject, 
             text: body.text

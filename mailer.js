@@ -11,7 +11,7 @@ const sender = nodemailer.createTransport({
     }
 })
 
-const templateMaker = ({ from, to, subject, text }) => {
+const templateMaker = ({ from, fromName, to, subject, text }) => {
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +94,8 @@ const templateMaker = ({ from, to, subject, text }) => {
       <h1>${subject}</h1>
     </div>
     <div class="content">
-      <p class="from-box">From (portfolio): ${from},</p>
+      <p class="from-box">From (portfolio): ${fromName}<br/>
+         Email: ${fromName},</p>
       <hr/>
       <p>${text}</p>
     </div>
